@@ -10,7 +10,7 @@ To create/modify pages go to CMS -> Pages -> Manage Content which is located in 
 
 For either creating or editing pages the following is the same:
 
-
+![New page](https://lh4.googleusercontent.com/6gMIVvbqxPNE1Ze9DQqvdb7tOMwInTItsBp7qrPzQzXyRhGqBXijd_0LaOHVdIcYzNAHoYIDbDXl5yv0KHzJ3Odpq7y6lSa2wWIuQoZe1VDCtTWHNExL9eP0t_dZEAUvv1jtZNI "New page")
 
 **Page Title**: Is the page title which you see in the browser tab
 
