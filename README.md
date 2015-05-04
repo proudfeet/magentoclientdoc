@@ -32,14 +32,13 @@ Note: You may create pages using the same name and have different store views to
 
 If you are returning to a page that has already been versioned you will see something like this. Click the link and you will be able to update content again.
 
-
-
+![Under Version Control](https://lh3.googleusercontent.com/zg3wzhsP9Wf7IZ5CC-1plMyKp0ozU-jP5TVoKLdg7vHeB8MKB3rFNRAR-6lAvhKH_xLgbVuBod0Tg2uq-TPA92QegFJPgshoTx5SI2H0WQJgdU8CRc4QDydDNy-HB-yISbnLEgE "Under Version Control")
 
 **Content Heading**: will be shown on the heading area on the page.
 
-**Content Section**: View Static block section for more details. You may add static blocks to pages using the identifier found within each block; all you need to do is add {{block type="cms/block" block_id="identifier from block goes here"}}
+**Content Section**: View Static block section for more details. You may add static blocks to pages using the identifier found within each block; all you need to do is add `{{block type="cms/block" block_id="identifier from block goes here"}}`
 
-
+![Keywords and Description](https://lh6.googleusercontent.com/_NV7K4uKFyqeinAr54plGj0rOSaAw0MQ8cR7k2jVsBLjgoa5-_Nn1AynVs93Kof4kC8PhoxQsOsyLVk2O0iYBBOBcpFBojajmhcJZ-dXyhOsWeIjynIdUpbhyPBAhYSb0yKc-6U "Keywords and Description")
 
 **Keywords**: enter keywords that you wish to have on the page for seo and search engines. ex. books, ebooks, movies, history
 
@@ -66,13 +65,11 @@ Our code in the CMS editor would need to look like:
 
 To update any given blocks in the Content Management System (CMS), head to your base url (staging = `yoursite.localhost.com`), followed by `/dmadmin`. Once here, enter the appropriate credentials. From here, navigate to CMS (located in the top navigation bar) -> Static blocks.
 
-
+![Static Blocks](https://lh3.googleusercontent.com/0OSG23Zf9gH9v7eF0mPY9XrhmMA9ymsHxOOpvxtwwpiZFWquaNIZoMcm7z6JLI0PkNux1bOMc7cH5eBmqbf3jlMR2IBDWmhoRc7tE22UEncooB8bfEzuKH0E2YihQnn48-7Lxl4 "Static Blocks")
 
 From here, you will be able to see all the editable static blocks. Select the block that you would like to edit by clicking on it. 
 
 All the code written into the static blocks are written to comply with the designs provided for those individual pages. All copy/content that you wish to insert into the templates **must follow the format indicated in the blocks themselves**. It is a good practice to keep a copy of the code before making any changes as all changes will be directly applied to the site upon saving. In the event something is wrong with your recent update you will have your previous content saved to your computer.
-
-
 
 ##Editing static block fields
 
@@ -90,13 +87,11 @@ All the code written into the static blocks are written to comply with the desig
 
 **Content**: This section is one of the more complicated section if you have never used a CMS before. Below are possible content options that you may need
 
-
+![Store Views Static Blocks](https://lh3.googleusercontent.com/Vk33XQDNNpmOCbPlox4JavNSVpyr5zQg0Xdn7cuFVxXea-toUU716pui3YdUOhl9V27xC2xVymQKGTAHqwkff0Z8U9hoSauXWLQhH3NOtozNPMaKw5ZjRPmuH4DYvA4JxYbHU60 "Store Views Static Blocks")
 
 From here, you will be able to see all the editable pages. Select the page that you would like to edit by clicking on it, you will be brought to a new page. You will notice that on the left of this page there is a sidebar with the title “Page Information”. Navigate to the “Content” tab of this sidebar. This will bring you to the “What You See Is What You Get” (WYSIWYG, wiz-ee-wig) editor, which is where all the content you wish to see on the page must be inputted
 
-
-
-
+![Edit CMS Page](https://lh5.googleusercontent.com/CzQYC-iGuaXKqXz3UypZnTCEiM7SbsYZZBiTo_Pu587Onc7Ug4mgNmm4p5XG0o4HbilvLb3jWt4ozEv3MiQmGQVz6lHGgung312miM0dPAmI-5SwTaYwforGZFz3iO55pZuwhYU "Edit CMS Page")
 
 ##Uploading Images
 To upload images, first navigate to a section in the template where it is indicated that an image should be place (this has already been accounted for as per the design files). This will be indicated via HTML comments that images should be placed between the lines that read "IMAGE MUST BE BETWEEN THESE TAGS".
@@ -105,7 +100,7 @@ Once there, click on the button that reads `Insert Image` in the native editor, 
 
 To actually put them on the site, simply click the image that you would like to see on the page and click the "Insert File" button in the top right corner. This will output something that looks like: `<img src="{{media url="wysiwyg/[imageName]"}}" alt="" />`. Note that image tags are self-closing and therefore do not require a closing tag.
 
- 
+![Uploading Images](https://lh4.googleusercontent.com/cFI-bv-VJ0S4lVwATZiv6LyzIEjJ-6tHNKuZ_Yg4b87ENKub5-Na_F2FFiKRc3pXAkdHsDe4mANw-y2000qZXH4azsPUcDrmAUscs96VeLnl7kbEpwSHt_3DLPxfsRPxtg_wRPA "Uploading Images")
 
 Please take a moment to include a brief (3-7 words) of your photo within the quotation marks following the `alt=`. As an example, if you were to upload the Scholastics logo, the tag would look like: `<img src="{{media url="wysiwyg/scholasticsLogo.jpg"}}" alt="Scholastics logo" />`. The alt attribute is very important not only for SEO, but also for those who are visually impaired and require a screen reader.
 
