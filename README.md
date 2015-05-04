@@ -190,7 +190,7 @@ As a reminder:
 Although we absolutely do not recommend doing this while the site is live, if for whatever reason you must change the translation, it can be enabled through the admin panel. To do this, log into the admin panel and navigate to System -> Configuration -> Developer (at the bottom of the left-hand menu), and scroll down to the “Translate Inline” tab, and set the “Enabled for Frontend” attribute to yes.
 ```
 
-#**CAUTION**: By doing this, you are enabling translations to be change by anyone through the front-end, including people who are simply browsing the site at that time.
+**CAUTION**: By doing this, you are enabling translations to be change by anyone through the front-end, including people who are simply browsing the site at that time.
 
 
 
