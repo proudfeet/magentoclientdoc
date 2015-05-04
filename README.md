@@ -125,73 +125,36 @@ As an example, to get to the contact-us page on yoursite.localhost.com, the corr
 
 To circumvent this, we can use a little code for our `href` attribute. Put the code `“{{store url="[PATH TO PAGE]"}}”` as the value of the `href` attribute, replacing `PATH TO PAGE` with the path to the page you want to direct to. Using this (assuming that the base url of our store is yoursite.localhost.com), the following code: `<a href="{{store url="about-us"}}">About Us</a>` will be turned into `<a href=”http://yoursite.localhost.com/about-us”>About Us</a>` before being rendered by browser.
 
-Absolute links, fortunately, are much easier to manage, though they also have a specific format you must follow. Like all links, absolute links require an href attribute to whichever site you wish to redirect to. What’s important for these links is that you include the full url to the website in question. This means that you must include “http://” (which stands for hypertext transfer protocol) before all links, simply setting the href attribute to “google.com” or even “www.google.com” will not suffice, as the browser will simply render it as a string of characters, rather than an address.
+Absolute links, fortunately, are much easier to manage, though they also have a specific format you must follow. Like all links, absolute links require an `href` attribute to whichever site you wish to redirect to. What’s important for these links is that you include the full url to the website in question. This means that you must include `http://` (which stands for hypertext transfer protocol) before all links. Simply setting the `href` attribute to `google.com` or even `www.google.com` will not suffice, as the browser will simply render it as a string of characters, rather than an address.
 
-Now, for example, if we want to write a link that directs the user to www.google.com, but shows in the browser as “This is a link to Google”, our code will look like <a href=”http://www.google.com>This is a link to Google</a>, and will be rendered in the browser as This is a link to Google.
+Now, for example, if we want to write a link that directs the user to `www.google.com`, but shows in the browser as `This is a link to Google`, our code will look like `<a href=”http://www.google.com>This is a link to Google</a>`, and will be rendered in the browser as [This is a link to Google](http://www.google.com).
 
-Similar to images, links can take another attribute that is important both for SEO and for accessibility issues - the “title” attribute. To add this, simply add: title=”[DESCRIPTION]” to your opening anchor tag. Now the code for our link above to Google will look like <a href=”http://www.google.com” title=”Google search engine”>This is a link to Google</a>.
+Similar to images, links can take another attribute that is important both for SEO and for accessibility issues - the `title` attribute. To add this, simply add: `title=”[DESCRIPTION]”` to your opening anchor tag. Now the code for our link above to Google will look like `<a href=”http://www.google.com” title=”Google search engine”>This is a link to Google</a>`.
 
-About Us Page
-This page follows the pattern of text adjusted to the left on the page, with an image sitting to the right of it. Given that, there are two sections created within the template to accommodate this design. All text should be placed between the tags that indicate “ALL TEXT MUST BE BETWEEN THESE TWO TAGS”. Remember that every individual paragraph within these tags should be between it’s own opening (<p>) and closing (</p>) tags
-
-As per the design, there are some paragraphs (from the design it appears only the first paragraph) that feature text that is both slightly larger and is coloured red. For these particular paragraphs, I have created a specific paragraph tag that has styles applied to it to match the design provided. This particular paragraph tag is indicated within the template, marked beside the opening and closing tags with “opening RED paragraph tag” and “closing RED paragraph tag” commented beside them, respectively.
-
-The image for this page should be inserted between the lines which read “IMAGE MUST BE BETWEEN THESE TAGS”. Once again, please take a moment to fill in the “alt” attribute after you have inserted the image tag.
-
-Contact Us Page
-All content inputted in this page template will be rendered before the “Contact Us” header on on the contact-us page.
-
-Any content inputted in the “Content Heading” field in the CMS will be rendered with the same size, colour, and weight as the “Contact Us” header, appearing at the top of the page.
-
-Similarly, any text inputted in the CMS editor will be rendered after the content of the “Content Heading” field (if it is inputted), but before the “Contact Us” header. If there is text to input, please take care to ensure that every paragraph is wrapped in an opening (<p>) and closing (</p>) paragraph tag.
-
-Shipping Policy, Web Privacy Policy, and Terms of Use Pages
-These pages follow a simple 1-column layout, and will consist largely (or entirely of text). As with all other pages, the text inputted into the “Content Heading” field in the CMS editor will be outputted as a heading on the page.
-
-As always, any text wish to see in the body of the page must go in the body of the CMS editor, once again, ensuring that each individual paragraph is wrapped in it’s own opening (<p>) and closing (</p>) tag.
-
-Translations
+##Translations
 
 First and foremost, this feature is very powerful and should only be used while in the development stage. This feature is also quite quirky, and for that reason we recommend using Firefox to make these changes. 
 
+___
 As mentioned, this feature should only be used while the site is in development, however, it can be enabled through the admin panel. To do this, log into the admin panel and navigate to System -> Configuration -> Developer (at the bottom of the left-hand menu), and scroll down to the “Translate Inline” tab, and set the “Enabled for Frontend” attribute to yes.
+___
 
-CAUTION: By doing this, you are enabling translations to be change by anyone through the front-end, including people who are simply browsing the site at that time.
-
-
-
-
-
-
+**CAUTION**: By doing this, you are enabling translations to be change by anyone through the front-end, including people who are simply browsing the site at that time.
 
 To change the text while on the French version of the site, simply navigate to the bottom-left corner of the English site and click on the link that reads “Français”. The page will reload in French.
 
 Developer client restrictions can be used to allow only certain IPs to view the developer options OR your translation text editor options
 
-
-
-
-
-
 You will notice that some text areas have a dotted red box surrounding them - these are the areas which you can modify the translation. To modify them, simply hover over the text until a small book icon appears and click on it. 
 
-
-
 A modal dialogue box will appear. Simply enter the text you would like to appear in the text field with the label “Custom”.
-
-
 
 Press the “Submit” button, and be sure to refresh the page, or you will not see the changes take effect.
 
 As a reminder:
 
-```
-Although we absolutely do not recommend doing this while the site is live, if for whatever reason you must change the translation, it can be enabled through the admin panel. To do this, log into the admin panel and navigate to System -> Configuration -> Developer (at the bottom of the left-hand menu), and scroll down to the “Translate Inline” tab, and set the “Enabled for Frontend” attribute to yes.
-```
+>Although we absolutely do not recommend doing this while the site is live, if for whatever reason you must change the translation, it can be enabled through the admin panel. To do this, log into the admin panel and navigate to System -> Configuration -> Developer (at the bottom of the left-hand menu), and scroll down to the “Translate Inline” tab, and set the “Enabled for Frontend” attribute to yes.
 
+___
 **CAUTION**: By doing this, you are enabling translations to be change by anyone through the front-end, including people who are simply browsing the site at that time.
-
-
-
-
-
+___
