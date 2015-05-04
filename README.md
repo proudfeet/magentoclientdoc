@@ -1,89 +1,95 @@
-Magento Content Guide
+#Magento Content Guide
 
-General Overview
+##General Overview
 The purpose of this document is to educate on how to update the template pages within the context of the code already written for this project.
 
 To update any given pages in the Content Management System (CMS), head to your base url, followed by /admin, /dmadmin. Once here, enter the appropriate credentials.
 
-Pages
+##Pages
 To create/modify pages go to CMS -> Pages -> Manage Content which is located in the navigation bar..
 
 For either creating or editing pages the following is the same:
 
 
 
-Page Title: Is the page title which you see in the browser tab
+**Page Title**: Is the page title which you see in the browser tab
 
-URL Key: Here you set the path without the domain prefixed, ex. contact-us would become utpress.com/contact-us
+**URL Key**: Here you set the path without the domain prefixed, ex. contact-us would become utpress.com/contact-us
 
-Store View: Are used to determine the store you wish for your content to be visible on
--All Store Views: This will show in all stores
--Canada:
-- - EN : This will only show in Canada english
-- - FR : This will only show in Canada French
+**Store View**: Are used to determine the store you wish for your content to be visible on
+- All Store Views: This will show in all stores
+- Canada:
+	- EN : This will only show in Canada english
+	- FR : This will only show in Canada French
 
+```
 Note: You may create pages using the same name and have different store views to allow for country/language specific content to be displayed
+```
 
-Status: Is used to turn the page on / off
+**Status**: Is used to turn the page on / off
 
-Under Version Control: Is used to allow all changes to be recorded, every time a change is made. This allows you to go back to older version if needed. 
+**Under Version Control**: Is used to allow all changes to be recorded, every time a change is made. This allows you to go back to older version if needed. 
 
 If you are returning to a page that has already been versioned you will see something like this. Click the link and you will be able to update content again.
 
 
 
 
-Content Heading: will be shown on the heading area on the page.
+**Content Heading**: will be shown on the heading area on the page.
 
-Content Section: View Static block section for more details. You may add static blocks to pages using the identifier found within each block; all you need to do is add {{block type="cms/block" block_id="identifier from block goes here"}}
+**Content Section**: View Static block section for more details. You may add static blocks to pages using the identifier found within each block; all you need to do is add {{block type="cms/block" block_id="identifier from block goes here"}}
 
 
 
-Keywords: enter keywords that you wish to have on the page for seo and search engines. ex. books,ebooks, movies, history
+**Keywords**: enter keywords that you wish to have on the page for seo and search engines. ex. books,ebooks, movies, history
 
-Description: enter description text that you wish to have on the page for seo and search engines. 
+**Description**: enter description text that you wish to have on the page for seo and search engines. 
 
-Inserting Copy/Content: If the page in question follows a specific design, and is not utilizing static blocks, please follow the instructions indicated in the templates, as they will ensure that the output of the copy/content inserted into the template will be outputted as indicated in the design assets.
+**Inserting Copy/Content**: If the page in question follows a specific design, and is not utilizing static blocks, please follow the instructions indicated in the templates, as they will ensure that the output of the copy/content inserted into the template will be outputted as indicated in the design assets.
 
 As an example, if we have two paragraphs of text that we would like to appear in the browser as: 
 
+```
 Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
+```
 
 Our code in the CMS editor would need to look like:
 
+```
 <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
 <p>Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.</p>
+```
 
-Static Blocks
+##Static Blocks
 
-To update any given blocks in the Content Management System (CMS), head to your base url (Demac staging = utpress.demacmedia.com), followed by /dmadmin. Once here, enter the appropriate credentials. From here, navigate to CMS (located in the top navigation bar) -> Static blocks.
+To update any given blocks in the Content Management System (CMS), head to your base url (Demac staging = `yoursite.demacmedia.com`), followed by `/dmadmin. Once here`, enter the appropriate credentials. From here, navigate to CMS (located in the top navigation bar) -> Static blocks.
 
 
 
 From here, you will be able to see all the editable static blocks. Select the block that you would like to edit by clicking on it. 
 
-All the code written into the static blocks are written to comply with the designs provided for those individual pages. All copy/content that you wish to insert into the templates must follow the format indicated in the blocks themselves. It is a good practice to keep a copy of the code before making any changes as all changes will be directly applied to the site upon saving. In the event something is wrong with your recent update you will have your previous content saved to your computer.
+All the code written into the static blocks are written to comply with the designs provided for those individual pages. All copy/content that you wish to insert into the templates **must follow the format indicated in the blocks themselves**. It is a good practice to keep a copy of the code before making any changes as all changes will be directly applied to the site upon saving. In the event something is wrong with your recent update you will have your previous content saved to your computer.
 
 
 
-Editing static block fields
+##Editing static block fields
 
-Block Title: Is the name of the static block that is used for internal use and will not be seen by any users. The main purpose is to help organize your content.
+**Block Title**: Is the name of the static block that is used for internal use and will not be seen by any users. The main purpose is to help organize your content.
 
-Identifier: Should never be changed as this is for developer use only
+**Identifier**: Should never be changed as this is for developer use only
 
-Store View: Are used to determine the store you wish for your content to be visible on
--All Store Views: This will show in all stores
--Canada:
-- - EN : This will only show in Canada english
-- - FR : This will only show in Canada French
+**Store View**: Are used to determine the store you wish for your content to be visible on
+- All Store Views: This will show in all stores
+- Canada:
+	- EN : This will only show in Canada english
+	- FR : This will only show in Canada French
 
-Status: Is used to turn on and off a block
+**Status**: Is used to turn on and off a block
 
-Content: This section is one of the more complicated section if you have never used a CMS before. Below are possible content options that you may need
+**Content**: This section is one of the more complicated section if you have never used a CMS before. Below are possible content options that you may need
 
 
 
@@ -93,7 +99,7 @@ From here, you will be able to see all the editable pages. Select the page that 
 
 
 
-Uploading Images
+##Uploading Images
 To upload images, first navigate to a section in the template where it is indicated that an image should be place (this has already been accounted for as per the design files). As an example, on the "About Us" page, I have indicated via HTML comments that images should be placed between the lines that read "IMAGE MUST BE BETWEEN THESE TAGS".
 
 Once there, click on the button that reads "Insert Image" in the native editor, which should be just below where you would input the content heading. Now navigate to the file that you would like to appear on your page, either already in the database, or if the file is on your computer click the "Browse Files..." button and navigate to the specific file(s) you would like to upload. Click "Open", and then "Upload Files". These files will then be added to the root storage, which means that they are available to be put on the site now.
