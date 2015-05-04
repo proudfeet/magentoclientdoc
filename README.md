@@ -14,7 +14,7 @@ For either creating or editing pages the following is the same:
 
 **Page Title**: Is the page title which you see in the browser tab
 
-**URL Key**: Here you set the path without the domain prefixed, ex. contact-us would become utpress.com/contact-us
+**URL Key**: Here you set the path without the domain prefixed, ex. contact-us would become localhost.com/contact-us
 
 **Store View**: Are used to determine the store you wish for your content to be visible on
 - All Store Views: This will show in all stores
@@ -41,7 +41,7 @@ If you are returning to a page that has already been versioned you will see some
 
 
 
-**Keywords**: enter keywords that you wish to have on the page for seo and search engines. ex. books,ebooks, movies, history
+**Keywords**: enter keywords that you wish to have on the page for seo and search engines. ex. books, ebooks, movies, history
 
 **Description**: enter description text that you wish to have on the page for seo and search engines. 
 
@@ -65,7 +65,7 @@ Our code in the CMS editor would need to look like:
 
 ##Static Blocks
 
-To update any given blocks in the Content Management System (CMS), head to your base url (Demac staging = `yoursite.demacmedia.com`), followed by `/dmadmin. Once here`, enter the appropriate credentials. From here, navigate to CMS (located in the top navigation bar) -> Static blocks.
+To update any given blocks in the Content Management System (CMS), head to your base url (staging = `yoursite.localhost.com`), followed by `/dmadmin`. Once here, enter the appropriate credentials. From here, navigate to CMS (located in the top navigation bar) -> Static blocks.
 
 
 
@@ -100,29 +100,29 @@ From here, you will be able to see all the editable pages. Select the page that 
 
 
 ##Uploading Images
-To upload images, first navigate to a section in the template where it is indicated that an image should be place (this has already been accounted for as per the design files). As an example, on the "About Us" page, I have indicated via HTML comments that images should be placed between the lines that read "IMAGE MUST BE BETWEEN THESE TAGS".
+To upload images, first navigate to a section in the template where it is indicated that an image should be place (this has already been accounted for as per the design files). This will be indicated via HTML comments that images should be placed between the lines that read "IMAGE MUST BE BETWEEN THESE TAGS".
 
-Once there, click on the button that reads "Insert Image" in the native editor, which should be just below where you would input the content heading. Now navigate to the file that you would like to appear on your page, either already in the database, or if the file is on your computer click the "Browse Files..." button and navigate to the specific file(s) you would like to upload. Click "Open", and then "Upload Files". These files will then be added to the root storage, which means that they are available to be put on the site now.
+Once there, click on the button that reads `Insert Image` in the native editor, which should be just below where you would input the content heading. Now navigate to the file that you would like to appear on your page, either already in the database, or if the file is on your computer click the `Browse Files...` button and navigate to the specific file(s) you would like to upload. Click `Open`, and then `Upload Files`. These files will then be added to the root storage, which means that they are available to be put on the site now.
 
-To actually put them on the site, simply click the image that you would like to see on the page and click the "Insert File" button in the top right corner. This will output something that looks like: <img src="{{media url="wysiwyg/[imageName]"}}" alt="" />. Note that image tags are self-closing and therefore do not require a closing tag.
+To actually put them on the site, simply click the image that you would like to see on the page and click the "Insert File" button in the top right corner. This will output something that looks like: `<img src="{{media url="wysiwyg/[imageName]"}}" alt="" />`. Note that image tags are self-closing and therefore do not require a closing tag.
 
  
 
-Please take a moment to include a brief (3-7 words) of your photo within the quotation marks following the alt=. As an example, if you were to upload the Scholastics logo, the tag would look like: <img src="{{media url="wysiwyg/scholasticsLogo.jpg"}}" alt="Scholastics logo" />. The alt attribute is very important not only for SEO, but also for those who are visually impaired and require a screen reader.
+Please take a moment to include a brief (3-7 words) of your photo within the quotation marks following the `alt=`. As an example, if you were to upload the Scholastics logo, the tag would look like: `<img src="{{media url="wysiwyg/scholasticsLogo.jpg"}}" alt="Scholastics logo" />`. The alt attribute is very important not only for SEO, but also for those who are visually impaired and require a screen reader.
 
-Where indicated, please include the following attribute to your images: style=”max-width: 100%;”. Using the above link as an example, our code will now look like: <img src="{{media url="wysiwyg/scholasticsLogo.jpg"}}" alt="Scholastics logo" style=”max-width: 100%;” />.
+Where indicated, please include the following attribute to your images: `style=”max-width: 100%;”`. Using the above link as an example, our code will now look like: `<img src="{{media url="wysiwyg/scholasticsLogo.jpg"}}" alt="Scholastics logo" style=”max-width: 100%;” />`.
 
-Anchors/Links
-Should you need to include a link somewhere in your copy, you must follow a very specific format. Similar to paragraphs, all links must be wrapped in an opening (<a>), and closing (</a>) anchor tag. 
+##Anchors/Links
+Should you need to include a link somewhere in your copy, you must follow a very specific format. Similar to paragraphs, all links must be wrapped in an opening (`<a>`), and closing (`</a>`) anchor tag. 
 
-The text in between the opening and closing anchor tags will be what the user see’s on the page.
+The text in between the opening and closing anchor tags will be what the user sees on the page.
 
-Links, however, absolutely must have an href attribute attached to the opening tag. The value for the href attribute determines where a given link leads to. 
+Links, however, absolutely must have an `href` attribute attached to the opening tag. The value for the `href` attribute determines where a given link leads to. 
 
-There are essentially two different formats you should follow for the href attribute, depending on where you would like the links to redirect to. These formats will be referred to as “relative” links and “absolute” links. The difference between the two is that relative links direct to somewhere else within the current website (such as the about-us page of the current website), whereas absolute links direct to an address external to the current website (such as Google).
+There are essentially two different formats you should follow for the `href` attribute, depending on where you would like the links to redirect to. These formats will be referred to as “relative” links and “absolute” links. The difference between the two is that relative links direct to somewhere else within the current website (such as the about-us page of the current website), whereas absolute links direct to an address external to the current website (such as Google).
 
 
-As an example, to get to the contact-us page on scholasticteacherstore.demacmedia.com, the correct url would be scholasticteacherstore.demacmedia.com/contact-us. The problem with simply setting this as the href attribute in the CMS editor, is that once the site has gone to production, it will have a different url as the base such as shop.scholastic.com. 
+As an example, to get to the contact-us page on yoursite.localhost.com, the correct url would be scholasticteacherstore.demacmedia.com/contact-us. The problem with simply setting this as the href attribute in the CMS editor, is that once the site has gone to production, it will have a different url as the base such as shop.scholastic.com. 
 
 To circumvent this, we can use a little code for our href attribute. Put the code “{{store url="[PATH TO PAGE]"}}” as the value of the href attribute, replacing “PATH TO PAGE” with the path to the page you want to direct to. Using this (assuming that the base url of our store is scholasticteacherstore.demacmedia.com), the following code: <a href="{{store url="about-us"}}">About Us</a> will be turned into <a href=”http://scholasticteacherstore.demacmedia.com/about-us”>About Us</a> before being rendered by browser.
 
