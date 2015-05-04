@@ -22,9 +22,7 @@ For either creating or editing pages the following is the same:
 	- EN : This will only show in Canada english
 	- FR : This will only show in Canada French
 
-```
-Note: You may create pages using the same name and have different store views to allow for country/language specific content to be displayed
-```
+>Note: You may create pages using the same name and have different store views to allow for country/language specific content to be displayed
 
 **Status**: Is used to turn the page on / off
 
