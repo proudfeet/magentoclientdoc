@@ -49,11 +49,10 @@ If you are returning to a page that has already been versioned you will see some
 
 As an example, if we have two paragraphs of text that we would like to appear in the browser as: 
 
-```
-Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
-```
+	Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+	Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
 
 Our code in the CMS editor would need to look like:
 
@@ -122,9 +121,9 @@ Links, however, absolutely must have an `href` attribute attached to the opening
 There are essentially two different formats you should follow for the `href` attribute, depending on where you would like the links to redirect to. These formats will be referred to as “relative” links and “absolute” links. The difference between the two is that relative links direct to somewhere else within the current website (such as the about-us page of the current website), whereas absolute links direct to an address external to the current website (such as Google).
 
 
-As an example, to get to the contact-us page on yoursite.localhost.com, the correct url would be scholasticteacherstore.demacmedia.com/contact-us. The problem with simply setting this as the href attribute in the CMS editor, is that once the site has gone to production, it will have a different url as the base such as shop.scholastic.com. 
+As an example, to get to the contact-us page on yoursite.localhost.com, the correct url would be `yoursite.localhost.com/contact-us`. The problem with simply setting this as the `href` attribute in the CMS editor, is that once the site has gone to production, it will have a different url as the base such as `yoursite.com`.
 
-To circumvent this, we can use a little code for our href attribute. Put the code “{{store url="[PATH TO PAGE]"}}” as the value of the href attribute, replacing “PATH TO PAGE” with the path to the page you want to direct to. Using this (assuming that the base url of our store is scholasticteacherstore.demacmedia.com), the following code: <a href="{{store url="about-us"}}">About Us</a> will be turned into <a href=”http://scholasticteacherstore.demacmedia.com/about-us”>About Us</a> before being rendered by browser.
+To circumvent this, we can use a little code for our `href` attribute. Put the code `“{{store url="[PATH TO PAGE]"}}”` as the value of the `href` attribute, replacing `PATH TO PAGE` with the path to the page you want to direct to. Using this (assuming that the base url of our store is yoursite.localhost.com), the following code: `<a href="{{store url="about-us"}}">About Us</a>` will be turned into `<a href=”http://yoursite.localhost.com/about-us”>About Us</a>` before being rendered by browser.
 
 Absolute links, fortunately, are much easier to manage, though they also have a specific format you must follow. Like all links, absolute links require an href attribute to whichever site you wish to redirect to. What’s important for these links is that you include the full url to the website in question. This means that you must include “http://” (which stands for hypertext transfer protocol) before all links, simply setting the href attribute to “google.com” or even “www.google.com” will not suffice, as the browser will simply render it as a string of characters, rather than an address.
 
